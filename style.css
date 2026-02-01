@@ -1,1 +1,76 @@
-/* Add you CSS here */
+/* Simple beginner-friendly CSS
+	 - Uses basic layout with flexbox
+	 - Comments explain each section so you can edit them
+*/
+
+:root{
+	--max-width: 1000px;
+	--accent: #5b8def;
+	--muted: #666;
+	--bg: #f7f8fb;
+	--card: #ffffff;
+	--radius: 8px;
+}
+
+/* Basic reset */
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+	background:var(--bg);
+	color:#222;
+	line-height:1.4;
+}
+
+/* Utility container to center content */
+.container{
+	width:90%;
+	max-width:var(--max-width);
+	margin:0 auto;
+}
+
+/* Header */
+.site-header{background:#fff;box-shadow:0 1px 0 rgba(0,0,0,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-size:1.1rem;margin:0}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+.main-nav a:hover{color:var(--accent)}
+
+/* Hero / Intro */
+.hero{background:linear-gradient(180deg, #eef6ff 0%, #ffffff 100%);padding:60px 0}
+.hero-inner{text-align:center}
+.hero-title{font-size:2.2rem;margin:0 0 8px}
+.hero-sub{margin:0 0 12px;color:var(--muted)}
+.hero-cta{margin:0;color:var(--muted)}
+
+/* Sections */
+.section-title{margin:28px 0 12px;font-size:1.1rem}
+.muted{color:var(--muted);font-size:0.95rem}
+
+/* Projects layout */
+.projects .project-category{margin-bottom:20px}
+.project-list{display:flex;flex-wrap:wrap;gap:12px}
+.project-card{background:var(--card);border-radius:var(--radius);padding:10px;width:220px;box-shadow:0 4px 10px rgba(16,24,40,0.04)}
+.project-thumb{width:100%;height:120px;object-fit:cover;border-radius:6px}
+.project-card h5{margin:8px 0 4px;font-size:0.98rem}
+
+/* Skills */
+.skills .skill{margin:12px 0}
+.skill-name{font-size:0.95rem;margin-bottom:6px}
+.skill-bar{background:#e7eefc;border-radius:999px;height:12px;overflow:hidden}
+.skill-fill{background:var(--accent);height:100%;border-radius:999px}
+
+/* Links list */
+.link-list{list-style:none;padding:0;margin:6px 0 30px}
+.link-list li{margin:6px 0}
+.link-list a{text-decoration:none;color:var(--accent)}
+
+/* Footer */
+.site-footer{padding:20px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+	.project-card{width:100%}
+	.hero-title{font-size:1.6rem}
+}
