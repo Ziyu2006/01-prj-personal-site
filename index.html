@@ -1,123 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziyu Shi | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- ===== Header / Navigation ===== -->
-    <header class="site-header">
+    <!-- Header / Nav -->
+    <header class="site-header" id="top">
       <div class="container header-inner">
-        <h1 class="logo">Your Name</h1>
-        <nav class="main-nav">
-          <a href="#intro">Intro</a>
+        <a class="logo" href="#top">Ziyu Shi</a>
+
+        <nav class="nav">
           <a href="#projects">Projects</a>
+          <a href="#art">Art</a>
+          <a href="#games">Games</a>
           <a href="#skills">Skills</a>
-          <a href="#links">Links</a>
+          <a href="#links">My Links</a>
         </nav>
       </div>
     </header>
 
-    <!-- ===== Big Intro / Hero Section ===== -->
-    <section id="intro" class="hero">
-      <div class="container hero-inner">
-        <!-- Keep text short and editable for beginners -->
-        <h2 class="hero-title">Hi — I'm Your Name</h2>
-        <p class="hero-sub">I make art, build small games, and create fanworks. Welcome to my portfolio.</p>
-        <p class="hero-cta">Explore my work below — click a category to learn more.</p>
-      </div>
-    </section>
+    <main>
+      <!-- Big Intro Section -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-profile">
+            <img src="img/profile.jpg" alt="Your profile photo" class="profile-photo" />
+          </div>
 
-    <!-- ===== Projects / Portfolio ===== -->
-    <main class="container">
-      <section id="projects" class="projects">
-        <h3 class="section-title">Projects & Portfolio</h3>
+          <div class="hero-text">
+            <h1>Hi, I'm Ziyu Shi!</h1>
+            <p class="subtitle">
+              I build web projects, make professional art, and create game stuff.
+              Welcome to my little corner of the internet.
+            </p>
 
-        <!-- Separate categories: Professional art, Game projects, Fanart -->
-        <div class="project-category">
-          <h4>Professional Art</h4>
-          <div class="project-list">
-            <!-- Duplicate and edit these cards as you create projects -->
-            <article class="project-card">
-              <img src="img/art-sample.jpg" alt="Art sample" class="project-thumb" />
-              <h5>Commissioned Illustration</h5>
-              <p class="muted">Tools: Photoshop • Client work</p>
-            </article>
-            <article class="project-card">
-              <img src="img/art-sample2.jpg" alt="Art sample" class="project-thumb" />
-              <h5>Book Cover</h5>
-              <p class="muted">Tools: Procreate • Editorial</p>
-            </article>
+            <p class="tiny-note">
+              Beginner-friendly site: simple HTML + CSS. Easy to edit as I learn.
+            </p>
           </div>
         </div>
+      </section>
 
-        <div class="project-category">
-          <h4>Game Projects</h4>
-          <div class="project-list">
-            <article class="project-card">
-              <img src="img/game-sample.jpg" alt="Game screenshot" class="project-thumb" />
-              <h5>2D Puzzle Prototype</h5>
-              <p class="muted">Built with: Godot • Gameplay prototype</p>
-            </article>
-            <article class="project-card">
-              <img src="img/game-sample2.jpg" alt="Game screenshot" class="project-thumb" />
-              <h5>Jam Entry</h5>
-              <p class="muted">Tools: Unity • 48-hour jam</p>
-            </article>
-          </div>
-        </div>
+      <!-- Projects / Portfolio (In progress + Completed) -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <p class="section-desc">
+            A mix of class assignments, experiments, and personal builds.
+          </p>
 
-        <div class="project-category">
-          <h4>Fanart</h4>
-          <div class="project-list">
-            <article class="project-card">
-              <img src="img/fanart-sample.jpg" alt="Fanart sample" class="project-thumb" />
-              <h5>Fan Illustration</h5>
-              <p class="muted">Personal project • Practice</p>
+          <div class="grid two">
+            <article class="panel">
+              <h3>In Progress</h3>
+
+              <div class="cards">
+                <article class="card">
+                  <h4>Course Project #1</h4>
+                  <p>Short description of what you’re building and why.</p>
+                  <p class="meta">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#" aria-label="Live demo link for Course Project 1">Live</a>
+                    <a href="#" aria-label="Source code link for Course Project 1">Code</a>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <h4>Portfolio Site (this one)</h4>
+                  <p>Iterating on layout, sections, and styling as I learn.</p>
+                  <p class="meta">
+                    <span class="tag">Layout</span>
+                    <span class="tag">Responsive</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Live</a>
+                    <a href="#">Code</a>
+                  </div>
+                </article>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>Completed</h3>
+
+              <div class="cards">
+                <article class="card">
+                  <h4>Small UI Component</h4>
+                  <p>A simple form / card / gallery component practice.</p>
+                  <p class="meta">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Practice</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Live</a>
+                    <a href="#">Code</a>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <h4>Mini Landing Page</h4>
+                  <p>A one-page layout with sections and basic navigation.</p>
+                  <p class="meta">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Flexbox</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Live</a>
+                    <a href="#">Code</a>
+                  </div>
+                </article>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===== Skills / Demonstration ===== -->
-      <section id="skills" class="skills">
-        <h3 class="section-title">Skills</h3>
-        <p class="muted">Edit the widths below to show your skill level (0–100%).</p>
+      <!-- Separate: Art (Pro + Fanart) -->
+      <section id="art" class="section alt">
+        <div class="container">
+          <h2>Art</h2>
+          <p class="section-desc">
+            I separate professional work and fanart so each has its own vibe.
+          </p>
 
-        <div class="skill">
-          <div class="skill-name">Digital Painting</div>
-          <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-        </div>
+          <div class="grid two">
+            <article class="panel">
+              <h3>Professional Art</h3>
+              <div class="cards">
+                <article class="card">
+                  <h4>Commission / Client Piece</h4>
+                  <p>Describe the goal, tools used, and what you’re proud of.</p>
+                  <p class="meta">
+                    <span class="tag">Illustration</span>
+                    <span class="tag">Client</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Gallery</a>
+                    <a href="#">Process</a>
+                  </div>
+                </article>
 
-        <div class="skill">
-          <div class="skill-name">2D Game Dev</div>
-          <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
-        </div>
+                <article class="card">
+                  <h4>Design Study</h4>
+                  <p>Color study, character sheet, or environment practice.</p>
+                  <p class="meta">
+                    <span class="tag">Study</span>
+                    <span class="tag">Color</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Gallery</a>
+                    <a href="#">Notes</a>
+                  </div>
+                </article>
+              </div>
+            </article>
 
-        <div class="skill">
-          <div class="skill-name">Pixel Art</div>
-          <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+            <article class="panel">
+              <h3>Fanart</h3>
+              <div class="cards">
+                <article class="card">
+                  <h4>Fanart Series</h4>
+                  <p>A themed set (characters, episodes, outfits, etc.).</p>
+                  <p class="meta">
+                    <span class="tag">Fanart</span>
+                    <span class="tag">Series</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Gallery</a>
+                    <a href="#">Post</a>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <h4>Sketch Dump</h4>
+                  <p>Loose drawings and experiments just for fun.</p>
+                  <p class="meta">
+                    <span class="tag">Sketch</span>
+                    <span class="tag">Fun</span>
+                  </p>
+                  <div class="card-links">
+                    <a href="#">Gallery</a>
+                    <a href="#">Thread</a>
+                  </div>
+                </article>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- ===== Personal Links ===== -->
-      <section id="links" class="links">
-        <h3 class="section-title">Find me online</h3>
-        <p class="muted">Replace these with your profiles and URLs.</p>
-        <ul class="link-list">
-          <li><a href="#">Portfolio / ArtStation</a></li>
-          <li><a href="#">GitHub (code & game projects)</a></li>
-          <li><a href="#">Twitter / Mastodon</a></li>
-          <li><a href="#">Contact: email@example.com</a></li>
-        </ul>
+      <!-- Separate: Game Stuff -->
+      <section id="games" class="section">
+        <div class="container">
+          <h2>Game Stuff</h2>
+          <p class="section-desc">
+            Game projects, prototypes, and experiments (design + dev + art).
+          </p>
+
+          <div class="grid three">
+            <article class="card">
+              <h3>Prototype: Puzzle Mechanic</h3>
+              <p>Explain the core mechanic in 1–2 lines.</p>
+              <p class="meta">
+                <span class="tag">Unity</span>
+                <span class="tag">Prototype</span>
+              </p>
+              <div class="card-links">
+                <a href="#">Video</a>
+                <a href="#">Build</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Small Narrative Game</h3>
+              <p>A short story-driven piece or interactive scene.</p>
+              <p class="meta">
+                <span class="tag">Narrative</span>
+                <span class="tag">Writing</span>
+              </p>
+              <div class="card-links">
+                <a href="#">Play</a>
+                <a href="#">Devlog</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>3D Asset / Environment</h3>
+              <p>Show models, materials, and a few process screenshots.</p>
+              <p class="meta">
+                <span class="tag">3D</span>
+                <span class="tag">Maya/Blender</span>
+              </p>
+              <div class="card-links">
+                <a href="#">Gallery</a>
+                <a href="#">Breakdown</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section alt">
+        <div class="container">
+          <h2>Skills</h2>
+          <p class="section-desc">
+            A quick snapshot. You can keep this honest + growing (we love progress).
+          </p>
+
+          <div class="grid two">
+            <article class="panel">
+              <h3>Web Development</h3>
+              <ul class="skill-list">
+                <li><span class="skill-name">HTML</span><span class="skill-level">Comfortable</span></li>
+                <li><span class="skill-name">CSS</span><span class="skill-level">Improving</span></li>
+                <li><span class="skill-name">JavaScript</span><span class="skill-level">Learning</span></li>
+                <li><span class="skill-name">Git / GitHub</span><span class="skill-level">Basics</span></li>
+              </ul>
+            </article>
+
+            <article class="panel">
+              <h3>Art + Game Skills</h3>
+              <ul class="skill-list">
+                <li><span class="skill-name">Digital Illustration</span><span class="skill-level">Strong</span></li>
+                <li><span class="skill-name">3D Modeling</span><span class="skill-level">Growing</span></li>
+                <li><span class="skill-name">Game Design</span><span class="skill-level">Growing</span></li>
+                <li><span class="skill-name">UI / UX Thinking</span><span class="skill-level">Learning</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Links -->
+      <section id="links" class="section">
+        <div class="container">
+          <h2>Links</h2>
+          <p class="section-desc">
+            Places to find me and my work.
+          </p>
+
+          <div class="links">
+            <a class="link-card" href="#" target="_blank" rel="noreferrer">
+              <h3>GitHub</h3>
+              <p>Code repositories + class projects.</p>
+            </a>
+
+            <a class="link-card" href="#" target="_blank" rel="noreferrer">
+              <h3>Art Portfolio</h3>
+              <p>Professional work + selected pieces.</p>
+            </a>
+
+            <a class="link-card" href="#" target="_blank" rel="noreferrer">
+              <h3>Itch.io</h3>
+              <p>Playable game builds and prototypes.</p>
+            </a>
+
+            <a class="link-card" href="#" target="_blank" rel="noreferrer">
+              <h3>Social</h3>
+              <p>Updates, sketches, and devlogs.</p>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- ===== Footer ===== -->
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container footer-inner">© Your Name — Student Portfolio</div>
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Ziyu Shi. Built with HTML + CSS.</p>
+      </div>
     </footer>
+
+    <script>
+      // Make logo link scroll to absolute top
+      document.querySelector('.logo').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
