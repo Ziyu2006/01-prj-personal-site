@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: min(1100px, 96%);
   margin: 0 auto;
 }
 
@@ -216,8 +216,8 @@ a {
 
 .cards {
   display: grid;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 14px;
+  margin-top: 12px;
 }
 
 .card {
@@ -226,6 +226,42 @@ a {
   border-radius: 18px;
   padding: 18px;
 }
+
+/* Project card background images */
+.card.project {
+  padding: 34px 14px; /* taller, narrower sides */
+  color: #fff;
+  position: relative;
+  min-height: 240px; /* larger cards */
+  background-color: #C0DA74; /* fallback matching requested color */
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.card.project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* 40% of #C0DA74 */
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.card.project h4,
+.card.project p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Per-card images */
+.card.project.p1 { background-image: url("img/G3010.jpg"); }
+.card.project.p2 { background-image: url("img/G2900_1.jpg"); }
+.card.project.p3 { background-image: url("img/G2900_2.png"); }
+.card.project.p4 { background-image: url("img/G2900_3.png"); }
+.card.project.p5 { background-image: url("img/g2600_persona.png"); }
+.card.project.p6 { background-image: url("img/g2600_weapon.png"); }
 
 .card h3,
 .card h4 {
@@ -298,16 +334,25 @@ a {
    Links
 ================= */
 .links {
-  display: grid;
+  display: flex;
   gap: 14px;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 .link-card {
-  padding: 16px;
-  border-radius: 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
   background: #EFF0CA;
   border: 1px solid #D5E0A6;
+  flex: 1 1 0;
+  min-width: 140px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
 .link-card h3 {
@@ -320,6 +365,32 @@ a {
 
 .link-card:hover {
   background: #C0DA74;
+}
+
+/* =================
+   Skills Tags
+================= */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #89ae7a;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: #6B9B57;
 }
 
 /* =================
@@ -344,9 +415,13 @@ a {
   }
 
   .grid.two,
-  .grid.three,
-  .links {
+  .grid.three {
     grid-template-columns: 1fr;
+  }
+
+  .links {
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .profile-photo {
