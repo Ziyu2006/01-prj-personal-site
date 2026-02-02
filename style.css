@@ -72,8 +72,6 @@ a {
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 1.05rem;
-
-  background: rgba(239, 240, 202, 0.55);
 }
 
 .nav a:hover {
@@ -98,7 +96,7 @@ a {
   background:
     linear-gradient(
       180deg,
-      rgba(239, 240, 202, 0.55),
+      rgba(239, 240, 202, 0.25),
       rgba(107, 155, 87, 0.75)
     ),
     url("img/banner.jpg");
@@ -151,7 +149,7 @@ a {
 .subtitle {
   margin: 0 0 14px;
   font-size: 1.25rem;
-  color: #30412e; /* secondary */
+  color: #EFF0CA;
 }
 
 .tiny-note {
@@ -253,7 +251,7 @@ a {
 }
 
 .card h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .card h4 {
@@ -269,7 +267,7 @@ a {
    Project cards (image tiles)
 ================= */
 .card.project {
-  padding: 46px 14px;
+  padding: 65px 14px;
   min-height: 260px;
   position: relative;
   overflow: hidden;
@@ -298,10 +296,9 @@ a {
 
 .card.project h3 {
   position: relative;
-  z-index: 1;
 
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   color: #EFF0CA;
 
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
@@ -348,6 +345,55 @@ a {
 }
 
 /* =================
+   WIP cards with image
+================= */
+.card.wip {
+  position: relative;
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* WIP image */
+.card.wip.wip1 {
+  background-image: url("img/wip_1.png");
+}
+
+/* dim overlay for readability */
+.card.wip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 32, 17, 0.4),
+    rgba(18, 32, 17, 0.75)
+  );
+  z-index: 0;
+}
+
+/* keep text above overlay */
+.card.wip h4 {
+  position: relative;
+  z-index: 1;
+  color: #EFF0CA;
+  font-size: 1.3rem;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card.wip h3 {
+  position: relative;
+
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #EFF0CA;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+
+/* =================
    Skills Tags (your .skills-tags)
 ================= */
 .skills-tags {
@@ -388,24 +434,27 @@ a {
 }
 
 .link-card {
-  padding: 14px 16px;
+  font-size: 2.2rem;
+  padding: 20px 16px;
   border-radius: 16px;
 
   background: rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(8px);
 
   flex: 1 1 160px;
+  flex-shrink: 0;
   max-width: 260px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: left;
 
   box-shadow: 0 10px 26px rgba(18, 32, 17, 0.12);
 }
 
 .link-card h3 {
+  font-size: 1.3rem;
   margin: 0;
   color: #122011;
 }
